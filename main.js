@@ -1,1 +1,1 @@
-console.log("come va?");
+console.log("come va?"),document.querySelector(".add-project").addEventListener("click",(e=>{e.preventDefault,console.log(e.target)}));

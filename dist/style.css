@@ -131,6 +131,7 @@ nav li i{
     grid-template-columns: 2% 1fr 15% 10% 10%;
     grid-template-rows: 1.5rem;
     justify-items: start;
+    align-items: baseline;
 }
 
 .add-task{

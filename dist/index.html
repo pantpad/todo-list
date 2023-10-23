@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1996863146.js" crossorigin="anonymous"></script>
+    <script src="./main.js" defer></script>
+    <title>todo-list</title>
+</head>
+
+<body>
+    <header>
+        <h1>todo-list</h1>
+    </header>
+    <main>
+        <nav>
+            <!-- <div class="open-projects">
+                <button class="open">
+                    <a href="">
+                        <i class="fa-solid fa-angle-down"></i>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </button>
+            </div> -->
+            <ul class="projects-tab">
+                <li class="project">
+                    <i class="fa-solid fa-inbox"></i>
+                    <a href="">Home</a>
+                </li>
+                <li class="project">
+                    <i class="fa-solid fa-calendar-day"></i>
+                    <a href="">Today</a>
+                </li>
+                <li class="project">
+                    <i class="fa-solid fa-calendar-week"></i>
+                    <a href="">This week</a>
+                </li>
+            </ul>
+            <div class="add-project">
+                <a href="">
+                    <i class="fa-regular fa-square-plus"></i>
+                </a>
+                <p>Add Project</p>
+            </div>
+        </nav>
+        <div class="current-project" id="current-project">
+            <h1 id="project-name">Home</h1>
+            <div class="task-list">
+                <div class="task">
+                    <input type="checkbox" name="" id="hid">
+                    <p>Task Description</p>
+                    <p>Task Due Date</p>
+                    <p>Priority</p>
+                    <p>Project</p>
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="" id="">
+                    <p>Fare la pizza in settimana</p>
+                    <p>26-10-2023</p>
+                    <p>ALTA</p>
+                    <p>Cucina</p>
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="" id="">
+                    <p>Fare la pasta in settimana con roberta simone e pasticche</p>
+                    <p>25-10-2023</p>
+                    <p>BASSA</p>
+                    <p>Cucina</p>
+                </div>
+            </div>
+            <div class="add-task">
+                <a href="">
+                    <i class="fa-regular fa-square-plus"></i>
+                </a>
+                <p>Add Task</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 pantapad</p>
+        <a href="https://github.com/pantpad" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </footer>
+</body>
+
+</html>

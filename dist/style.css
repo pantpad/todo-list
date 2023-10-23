@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --footer-color: #555;
+    --header-color: #333;
+    --text-color: #e2e8f0;
+    --nav-color: #ddd;
+    --main-color: #eee;
+}
+
+*,*::before,*::after{
+    padding:0;
+    margin: 0;
+}
+
+html{
+    position: relative;
+    min-height: 100vh;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--header-color);
+    color: var(--text-color);
+}
+
+header h1{
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 70px - 51px);
+}
+
+nav{
+    background-color: var(--nav-color);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1em;
+}
+
+nav > *{
+    width: 100%;
+}
+
+.open-projects:hover,
+.add-project:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+.project{
+    padding:0.75em 0.5em;
+    border-radius: 5px;
+    display: flex;
+    gap: 8px;
+}
+
+.project:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.add-project{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--header-color);
+}
+
+nav a{
+    color: var(--header-color);
+    text-decoration: none;
+}
+
+nav i{
+    color: var(--header-color);
+    margin:0.5em;
+}
+
+nav li i{
+    margin:0;
+}
+
+.current-project{
+    background-color: var(--main-color);
+    flex:3;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 3em;
+}
+
+.current-project h1{
+    margin-bottom:10px;
+}
+
+#hid{
+    position: relative;
+    visibility: hidden;
+}
+
+.task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 2% 1fr 15% 10% 10%;
+    grid-template-rows: 1.5rem;
+    justify-items: start;
+}
+
+.add-task{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top:20px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--footer-color);
+    padding: 1em;
+    color: var(--text-color);
+}
+
+i{
+    color:black;
+    margin-left:5px;
+}

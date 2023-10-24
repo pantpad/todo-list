@@ -92,11 +92,11 @@ ul{
     display: none;
 }
 
-.add-project-form.active{
+.add-project-form{
     display: flex;
 }
 
-.add-project-form{
+.add-project-form.hidden{
     display: none;
 }
 

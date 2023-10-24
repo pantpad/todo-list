@@ -88,6 +88,21 @@ ul{
     color: var(--header-color);
 }
 
+.add-project.active{
+    display: none;
+}
+
+.add-project-form.active{
+    display: flex;
+}
+
+.add-project-form{
+    display: none;
+}
+
+
+
+
 nav a{
     color: var(--header-color);
     text-decoration: none;

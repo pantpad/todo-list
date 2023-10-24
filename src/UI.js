@@ -1,13 +1,31 @@
-const UI = (function (){
-    //loading necessary UI elements
-    const projectsTab = document.querySelector('.projects-tab');
-    const addProject = document.querySelector('.add-project');
-    const addProjectForm = document.querySelector('.add-project-form');
-    const cancelForm = document.getElementById('cancel-form');
-    const saveForm = document.getElementById('save-form');
-    const projectInput = document.getElementById('form-input');
+import projects from "./projects.js";
+import createProject from "./createProject.js";
 
-    return {projectsTab,addProject,addProjectForm,cancelForm,saveForm,projectInput};
+const UI = (function () {
+
+    function loadProjects(){
+        projects.projectList.forEach(project => {
+            const projectsTab = document.querySelector('.projects-tab');
+            //create li
+            const newProject = document.createElement('li');
+            newProject.className = 'project';
+            //add icon
+            const icon = document.createElement('i');
+            icon.className = 'fa-solid fa-list';
+            //add a
+            const aTag = document.createElement('a');
+            aTag.textContent = project.name;
+            //append to li
+            newProject.appendChild(icon);
+            newProject.appendChild(aTag);
+            //append to ul
+            projectsTab.appendChild(newProject);
+        });
+    }
+
+    createProject.runProjectEventListeners();
+
+    return {loadProjects};
 })();
 
 export default UI

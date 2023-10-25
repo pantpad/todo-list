@@ -4,9 +4,18 @@ const projects = (() => {
 
     let projectList = [];
 
-    function Project(name){
-        return {name};
+    function Project(name,icon){
+        return {name,icon};
     }
+
+    const home = Project('Home','fa-solid fa-inbox');
+    projectList.push(home);
+
+    const today = Project('Today','fa-solid fa-calendar-day');
+    projectList.push(today);
+
+    const week = Project('This Week','fa-solid fa-calendar-week');
+    projectList.push(week);
 
     function addProject(name){
         const project = Project(name);

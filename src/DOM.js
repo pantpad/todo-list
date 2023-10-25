@@ -23,7 +23,7 @@ const DOM = (function () {
             newProject.className = 'project';
             //add icon
             const icon = document.createElement('i');
-            icon.className = 'fa-solid fa-list';
+            icon.className = project.icon ?? 'fa-solid fa-list';
             //add a
             const aTag = document.createElement('a');
             aTag.textContent = project.name;

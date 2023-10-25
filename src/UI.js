@@ -4,8 +4,11 @@ import createProject from "./createProject.js";
 const UI = (function () {
 
     function loadProjects(){
+        const projectsTab = document.querySelector('.projects-tab');
+        projectsTab.textContent = '';
+        
         projects.projectList.forEach(project => {
-            const projectsTab = document.querySelector('.projects-tab');
+            
             //create li
             const newProject = document.createElement('li');
             newProject.className = 'project';

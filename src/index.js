@@ -1,3 +1,3 @@
-import UI from './UI';
+import DOM from './DOM';
 
-UI.loadProjects();
+DOM.loadProjects();

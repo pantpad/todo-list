@@ -1,4 +1,4 @@
-import UI from "./UI.js";
+import DOM from "./DOM.js";
 
 const projects = (() => {
 
@@ -11,7 +11,7 @@ const projects = (() => {
     function addProject(name){
         const project = Project(name);
         projectList.push(project);
-        UI.loadProjects();
+        DOM.loadProjects();
     }
 
     return {projectList,addProject}

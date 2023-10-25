@@ -7,6 +7,7 @@ const DOM = (function () {
     const projectsTab = document.querySelector('.projects-tab');
     const projectForm = document.querySelector('.add-project-form');
     const projectInput = document.getElementById('form-input');
+    const colorInput = document.getElementById('color-selection');
 
     const add = document.querySelector('.add-project');
     const save = document.getElementById('save-form');
@@ -23,7 +24,7 @@ const DOM = (function () {
             newProject.className = 'project';
             //add icon
             const icon = document.createElement('i');
-            icon.className = project.icon ?? 'fa-solid fa-list';
+            icon.className = project.icon ?? `circle ${project.color}`;
             //add a
             const aTag = document.createElement('a');
             aTag.textContent = project.name;
@@ -59,7 +60,7 @@ const DOM = (function () {
 
         function processProjectInput(e) {
             e.preventDefault();
-            projects.addProject(projectInput.value);
+            projects.addProject(projectInput.value,colorInput.value);
             hideProjectForm();
         }
 

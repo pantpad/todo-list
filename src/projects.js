@@ -4,8 +4,8 @@ const projects = (() => {
 
     let projectList = [];
 
-    function Project(name,icon){
-        return {name,icon};
+    function Project(name,icon,color){
+        return {name,icon,color};
     }
 
     const home = Project('Home','fa-solid fa-inbox');
@@ -17,8 +17,8 @@ const projects = (() => {
     const week = Project('This Week','fa-solid fa-calendar-week');
     projectList.push(week);
 
-    function addProject(name){
-        const project = Project(name);
+    function addProject(name,color){
+        const project = Project(name,null,color);
         projectList.push(project);
         DOM.loadProjects();
     }

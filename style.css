@@ -94,6 +94,46 @@ ul{
 
 .add-project-form{
     display: flex;
+    flex-direction: column;
+}
+
+.project-form-field{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.project-form-buttons-field{
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+}
+
+.project-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 58px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 0 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
 }
 
 .add-project-form.hidden{

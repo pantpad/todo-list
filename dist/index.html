@@ -43,9 +43,22 @@
                 <p>Add Project</p>
             </div>
             <div class="add-project-form hidden">
-                <input type="text" id="form-input">
-                <button id="save-form"> SAVE </button>
-                <button id="cancel-form"> CANCEL </button>
+                <div class="project-form-field">
+                    <label for="form-input">Name</label>
+                    <input type="text" id="form-input">
+                </div>
+                <div class="project-form-field">
+                    <label for="color-selection">Color</label>
+                    <select id="color-selection" name="color-selection">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </div>
+                <div class="project-form-buttons-field">
+                    <button id="save-form" class="project-button green"> SAVE </button>
+                    <button id="cancel-form" class="project-button red"> CANCEL </button>
+                </div>
             </div>
         </nav>
         <div class="current-project" id="current-project">

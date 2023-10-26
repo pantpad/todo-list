@@ -3,6 +3,8 @@ import projects from "./projects";
 const DOM = (function () {
 
     //RECURRENT DOM ELEMENTS
+    //TASKS DOM ELEMENTS
+    const currentProject = document.getElementById('project-name');
     //PROJECTS DOM ELEMENTS
     const projectsTab = document.querySelector('.projects-tab');
     const projectForm = document.querySelector('.add-project-form');
@@ -34,7 +36,7 @@ const DOM = (function () {
             newProject.appendChild(aTag);
 
             //add event listener to each project
-            newProject.addEventListener('click',(e) => console.log('Carica task su UI in base al progetto: '+project.name));
+            newProject.addEventListener('click',(e) => loadProject(project.name));
 
             //append to ul
             projectsTab.appendChild(newProject);
@@ -69,6 +71,10 @@ const DOM = (function () {
             hideProjectForm();
         }
 
+    }
+
+    function loadProject(projectName){
+        currentProject.textContent = projectName; 
     }
 
     function runEventListeners() {

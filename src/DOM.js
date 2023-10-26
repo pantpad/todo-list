@@ -4,7 +4,9 @@ const DOM = (function () {
 
     //RECURRENT DOM ELEMENTS
     //TASKS DOM ELEMENTS
+    const taskList = document.getElementById('task-list');
     const currentProject = document.getElementById('project-name');
+    loadProject(projects.projectList[0]);
     //PROJECTS DOM ELEMENTS
     const projectsTab = document.querySelector('.projects-tab');
     const projectForm = document.querySelector('.add-project-form');
@@ -36,7 +38,7 @@ const DOM = (function () {
             newProject.appendChild(aTag);
 
             //add event listener to each project
-            newProject.addEventListener('click',(e) => loadProject(project.name));
+            newProject.addEventListener('click',(e) => loadProject(project));
 
             //append to ul
             projectsTab.appendChild(newProject);
@@ -73,8 +75,51 @@ const DOM = (function () {
 
     }
 
-    function loadProject(projectName){
-        currentProject.textContent = projectName; 
+    function loadProject(project){
+        setHeading(project.name);
+        
+        taskList.textContent = '';
+
+        project.tasks.forEach(task => {
+            //create task-div
+            const newTask = document.createElement('div');
+            newTask.className = 'task';
+            
+            //create checkbox
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = task.completed;
+
+            //create description
+            const description = document.createElement('p');
+            description.textContent = task.description;
+
+            //create dueDate
+            const dueDate = document.createElement('p');
+            dueDate.textContent = task.date;
+
+            //create Priority
+            const priority = document.createElement('p');
+            priority.textContent = task.priority;
+
+            //create projectProperty
+            const projectProperty = document.createElement('p');
+            projectProperty.textContent = projects.projectList[task.projectIndex].name;
+
+            newTask.appendChild(checkbox);
+            newTask.appendChild(description);
+            newTask.appendChild(dueDate);
+            newTask.appendChild(priority);
+            newTask.appendChild(projectProperty);
+
+            taskList.appendChild(newTask);
+            
+        });
+
+    }
+
+    function setHeading(name){
+        currentProject.textContent = name; 
     }
 
     function runEventListeners() {

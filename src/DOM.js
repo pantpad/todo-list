@@ -32,6 +32,10 @@ const DOM = (function () {
             //append to li
             newProject.appendChild(icon);
             newProject.appendChild(aTag);
+
+            //add event listener to each project
+            newProject.addEventListener('click',(e) => console.log('Carica task su UI in base al progetto: '+project.name));
+
             //append to ul
             projectsTab.appendChild(newProject);
         });

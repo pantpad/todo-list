@@ -24,7 +24,8 @@ const DOM = (function () {
             newProject.className = 'project';
             //add icon
             const icon = document.createElement('i');
-            icon.className = project.icon ?? `circle ${project.color}`;
+            icon.className = project.icon ?? `circle`;
+            icon.style.backgroundColor = project.color;
             //add a
             const aTag = document.createElement('a');
             aTag.textContent = project.name;

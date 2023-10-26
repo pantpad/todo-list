@@ -74,6 +74,7 @@ ul{
     border-radius: 5px;
     display: flex;
     gap: 8px;
+    align-items: center;
 }
 
 .project:hover{
@@ -126,6 +127,13 @@ ul{
     line-height: 22px;
     text-align: center;
     vertical-align: center;
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left:2px;
 }
 
 .red{
